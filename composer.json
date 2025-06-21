@@ -1,0 +1,64 @@
+{
+    "name": "laravelgpt/data-breach",
+    "description": "A comprehensive cybersecurity toolkit for Laravel 12 with multiple frontend integrations and advanced analytics capabilities",
+    "type": "library",
+    "license": "MIT",
+    "version": "1.0.0",
+    "keywords": [
+        "laravel",
+        "cybersecurity",
+        "data-breach",
+        "password-checker",
+        "malware-detection",
+        "dark-web-monitor",
+        "cursor-analytics",
+        "session-replay",
+        "livewire",
+        "volt"
+    ],
+    "authors": [
+        {
+            "name": "LaravelGPT",
+            "email": "support@laravelgpt.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "laravel/framework": "^12.0",
+        "livewire/livewire": "^3.0.6",
+        "laravel/volt": "^1.0",
+        "inertiajs/inertia-laravel": "^1.0",
+        "react/react": "^18.0",
+        "vue/vue": "^3.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^10.0",
+        "phpunit/phpunit": "^10.0",
+        "mockery/mockery": "^1.0",
+        "pestphp/pest": "^2.0",
+        "nunomaduro/phpstan": "^1.10",
+        "larastan/larastan": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "LaravelGPT\\DataBreach\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LaravelGPT\\DataBreach\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaravelGPT\\DataBreach\\DataBreachServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+} 

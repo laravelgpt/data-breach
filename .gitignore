@@ -1,0 +1,71 @@
+# LaravelGPT Data Breach Package .gitignore
+
+# Composer
+/vendor/
+composer.lock
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Cache
+cache/
+*.cache
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Testing
+.phpunit.result.cache
+coverage/
+tests/coverage/
+
+# Build
+dist/
+build/
+node_modules/
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+
+# Backup files
+*.bak
+*.backup
+
+# Database
+*.sqlite
+*.db
+
+# Config overrides
+config/*.local.php
+
+# Storage
+storage/app/public/
+storage/framework/cache/
+storage/framework/sessions/
+storage/framework/views/
+storage/logs/
+
+# Compiled assets
+public/mix-manifest.json
+public/css/
+public/js/
+
+# Package specific
+.cursor-analytics/
+.session-replay/ 
