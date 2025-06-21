@@ -56,6 +56,14 @@ class DataBreachServiceProvider extends ServiceProvider
                 __DIR__.'/../resources/views' => resource_path('views/vendor/data-breach'),
             ], 'data-breach-views');
 
+            $this->publishes([
+                __DIR__.'/../resources/js' => resource_path('js/vendor/data-breach'),
+            ], 'data-breach-assets');
+
+            $this->publishes([
+                __DIR__.'/../database/migrations' => database_path('migrations'),
+            ], 'data-breach-migrations');
+
             $this->commands([
                 InstallCommand::class,
                 PublishFrontendCommand::class,
@@ -65,6 +73,7 @@ class DataBreachServiceProvider extends ServiceProvider
         $this->registerBladeDirectives();
         $this->registerLivewireComponents();
         $this->registerVoltComponents();
+        $this->registerRoutes();
     }
 
     /**
@@ -118,5 +127,14 @@ class DataBreachServiceProvider extends ServiceProvider
                 \Illuminate\Support\Facades\Log::warning('Failed to register Volt components', ['error' => $e->getMessage()]);
             }
         }
+    }
+
+    /**
+     * Register routes.
+     */
+    protected function registerRoutes(): void
+    {
+        Route::middleware('web')
+            ->group(__DIR__.'/../routes/web.php');
     }
 } 

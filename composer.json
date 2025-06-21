@@ -3,7 +3,7 @@
     "description": "A comprehensive cybersecurity toolkit for Laravel 12 with multiple frontend integrations and advanced analytics capabilities",
     "type": "library",
     "license": "MIT",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "keywords": [
         "laravel",
         "cybersecurity",
@@ -14,12 +14,16 @@
         "cursor-analytics",
         "session-replay",
         "livewire",
-        "volt"
+        "volt",
+        "vue",
+        "react",
+        "blade"
     ],
     "authors": [
         {
             "name": "LaravelGPT",
-            "email": "support@laravelgpt.com"
+            "email": "support@laravelgpt.com",
+            "homepage": "https://laravelgpt.com"
         }
     ],
     "require": {
@@ -27,9 +31,15 @@
         "laravel/framework": "^12.0",
         "livewire/livewire": "^3.0.6",
         "laravel/volt": "^1.0",
-        "inertiajs/inertia-laravel": "^1.0",
-        "react/react": "^18.0",
-        "vue/vue": "^3.0"
+        "guzzlehttp/guzzle": "^7.0",
+        "illuminate/support": "^12.0",
+        "illuminate/database": "^12.0",
+        "illuminate/http": "^12.0",
+        "illuminate/console": "^12.0",
+        "illuminate/validation": "^12.0",
+        "illuminate/cache": "^12.0",
+        "illuminate/logging": "^12.0",
+        "illuminate/mail": "^12.0"
     },
     "require-dev": {
         "orchestra/testbench": "^10.0",
@@ -37,7 +47,8 @@
         "mockery/mockery": "^1.0",
         "pestphp/pest": "^2.0",
         "nunomaduro/phpstan": "^1.10",
-        "larastan/larastan": "^2.0"
+        "larastan/larastan": "^2.0",
+        "laravel/pint": "^1.0"
     },
     "autoload": {
         "psr-4": {
@@ -57,8 +68,24 @@
         }
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "php-http/discovery": true
+        }
     },
     "minimum-stability": "stable",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "analyse": "vendor/bin/phpstan analyse",
+        "format": "vendor/bin/pint"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packagist.org"
+        }
+    ]
 } 
